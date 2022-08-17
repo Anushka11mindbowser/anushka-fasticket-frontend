@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-        <div class="container-fluid">
+        <div class="movie-info">
             <p>
                 Movie:
                 <br> Date and Time:
@@ -9,7 +9,7 @@
 
         <div class="ticket-counter" style="display: flex; width: 250px">
             <label style="margin: 5px">No. of Tickets: </label>
-            <input style="width: 40px; margin: 5px" type="number" max="5" min="1" />
+            <input style="width: 40px; margin: 5px" type="number" max="5" min="1" id="count" />
         </div>
     </div>
 </nav>
@@ -20,30 +20,31 @@
         <div class="col-10" style="background-color: #0A1128; margin-top: 20px ;">
 
 
-            <div class="container" style=" perspective: 1500px; margin-bottom: 35px;">
-                <div class="screen">
+
+
+
+
+            <div class="container" id="container">
+
+                <div class="screen" style="margin-bottom: 35px;">
                 </div>
-            </div>
 
 
-
-            <div class="container" style="margin-left: 250px;">
-
-                <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-1"></div>
-                    <div class="col-1"></div>
-                    <div class="col-1"></div>
-                    <div class="col-1"></div>
-                    <div class="col-1"></div>
-                    <div class="col-1"></div>
-                    <div class="col-1"></div>
-                    <div class="col-1"></div>
-                    <div class="col-1"></div>
+                <div class="row seat-row">
+                    <div class="col-1" id="1"></div>
+                    <div class="col-1" id="2"></div>
+                    <div class="col-1" id="3"></div>
+                    <div class="col-1" id="4"></div>
+                    <div class="col-1" id="5"></div>
+                    <div class="col-1" id="6"></div>
+                    <div class="col-1" id="7"></div>
+                    <div class="col-1" id="8"></div>
+                    <div class="col-1" id="9"></div>
+                    <div class="col-1" id="10"></div>
 
                     ]
                 </div>
-                <div class="row">
+                <div class="row seat-row">
                     <div class="col-1"></div>
                     <div class="col-1"></div>
                     <div class="col-1"></div>
@@ -57,7 +58,7 @@
 
 
                 </div>
-                <div class="row">
+                <div class="row seat-row">
                     <div class="col-1"></div>
                     <div class="col-1"></div>
                     <div class="col-1"></div>
@@ -71,7 +72,7 @@
 
 
                 </div>
-                <div class="row">
+                <div class="row seat-row">
                     <div class="col-1"></div>
                     <div class="col-1"></div>
                     <div class="col-1"></div>
@@ -124,8 +125,7 @@
         </div>
     </div>
 </div>
-<div class="card">
-    <div class="card-body">
 
-    </div>
+<div class="container-fluid" style="margin-top:25px;">
+    <button class="btn btn-success" (click)="goToPayment()">Pay Rs.200 x {{ticketNo}}</button>
 </div>
