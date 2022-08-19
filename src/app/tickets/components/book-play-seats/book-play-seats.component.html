@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="movie-info">
             <p>
-                <span>Movie: </span>{{selectedMovie.movie_name}}
+                <span>Movie: </span>{{selectedPlay.play_name}}
                 <br><span>Date and Time:</span> 21 Aug 2022 | 17.30
             </p>
         </div>
@@ -122,5 +122,5 @@
 </div>
 
 <div class="container-fluid" style="margin-top:25px;">
-    <button class="btn btn-success" (click)="goToPayment(selectedMovie)">Pay Rs.200 x {{seat_quantity}}</button>
+    <button class="btn btn-success" (click)="goToPayment(selectedPlay)">Pay Rs.200 x {{seat_quantity}}</button>
 </div>

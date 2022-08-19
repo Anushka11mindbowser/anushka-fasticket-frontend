@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="card">
+        <h1>Confirm Booking</h1>
+        <div class="card-body">
+            <div class="card align-items-center d-flex justify-content-center" style="margin: 25px; border-radius:15px;">
+
+                <img src="{{bookedMovie.movie_poster}}" style="height: 250px ; width:250px; margin: 15px;">
+            </div>
+            <div class="container">
+                <form [formGroup]="form" (ngSubmit)="submitForm()">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your name:" formControlName="name">
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="username" aria-label="Username" formControlName="email">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="mb-3">
+
+                                <input class="form-control" id="inputPhoneNumber" placeholder="your phone:" formControlName="phone">
+
+                            </div>
+
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <select class="form-select" aria-label="Disabled select example" disabled>
+                                    <option  selected>{{bookedMovie.movie_name}} </option>
+                            </select>
+                            </div>
+
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <select class="form-select" aria-label="Disabled select example" disabled>
+                                    <option selected>21 August | 17.30</option>
+                            </select>
+                            </div>
+
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <select class="form-select" aria-label="Disabled select example" disabled>
+                                    <option   selected>Seat Nos.</option>
+                            </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button class="btn btn-info">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </div>

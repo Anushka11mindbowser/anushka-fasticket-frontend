@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="card">
-        <div class="card-body" style="background-color: #5A62DC;">
-            <div class="row" style="border: 2px solid black ;  color: white; border: none;">
+        <div class="card-body" style="background-color: #5a62dc">
+            <div class="row" style="border: 2px solid black; color: white; border: none">
                 <div class="col-2">Booking ID</div>
                 <div class="col-2">Tickets</div>
                 <div class="col-4">Show Details</div>
@@ -11,40 +11,37 @@
     </div>
     <div class="card">
         <div class="card-body">
-
-
-            <div class="row" style="border: none;">
+            <div class="row" style="border: none" *ngFor="let bl of bookingsList">
                 <div class="col-2">
-                    <h4><span class="badge text-bg-primary">B1</span></h4>
+                    <h4>
+                        <span class="badge text-bg-primary">{{ bl.id }}</span>
+                    </h4>
                 </div>
                 <div class="col-2">
                     <h2><span class="badge bg-secondary">2</span></h2>
                 </div>
                 <div class="col-4">
-                    <div class="card mb-3" style="max-width: 540px; background-color: #A0A6BE; color: white;">
+                    <div class="card mb-3" style="max-width: 540px; background-color: #a0a6be; color: white">
                         <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="https://dnm.nflximg.net/api/v6/2DuQlx0fM4wd1nzqm5BFBi6ILa8/AAAAQbAY9uq8R7Pax0YiTjMYviwgS-YeSkaGFmsyRGHckScQM4n5xHdb1HlCjW0u5TP3QUmWIZoxoF4EeK9HW7bdN5RJe6fx0ime3670bcF_zbs9XeIlNxSQz7WZCbl0dCTNhRYYPKKg5RbNdjJkFERVf5Hq.jpg?r=2db" class="img-fluid rounded-start"
-                                    style="margin:auto" height="150px">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">The Grey Man</h5>
-                                    <p class="card-text">16 Aug 2022 <br> 17:35</p>
 
+                            <div class="col">
+                                <div class="card-body">
+                                    <h5 class="card-title">Show:{{bl.show}}</h5>
+                                    <p class="card-text">
+                                        Date & Time {{bl.datetime}}
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card mb-3" style="background-color: #A0A6BE; color:white">
+                    <div class="card mb-3" style="background-color: #a0a6be; color: white">
                         <div class="card-body">
                             <h5 class="card-title">User Details</h5>
-                            <p class="card-text">Name:Anushka Pawar<br>Email:anushkapawar35@gmail.com<br>Booked At: 09:30</p>
-
-
-
+                            <p class="card-text">
+                                {{ bl.name }}<br />{{ bl.email }}<br />{{ bl.booked_at }}
+                            </p>
                         </div>
                     </div>
                 </div>

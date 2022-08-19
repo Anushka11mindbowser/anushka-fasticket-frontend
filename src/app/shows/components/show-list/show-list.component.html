@@ -1,26 +1,27 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="card" style="margin-top:25px; margin-bottom:25px"></div>
+        <div class="card card-1"></div>
 
         <div class="container text-center">
-            <p class="badge text-bg-info" style="font-size:larger">Movies</p>
+            <p class="badge text-bg-info">Movies</p>
 
         </div>
 
         <div class="card-body">
             <div class="container-fluid">
-                <div class="row" style="background-color: #EBE1DF;">
+                <div class="row movie-row">
                     <div class="col-3" *ngFor="let movie of moviesList">
 
-                        <div class="card" style="width: 18rem; margin-bottom: 25px ; background-color: #34403A;">
+                        <div class="card movie-card" style="width: 18rem; margin: 35px ; background-color: #34403A;">
                             <img src="{{movie.movie_poster}}" class="card-img-top" style="height:250px; width: 150px margin
                         25px;">
                             <div class="card-body">
-                                <p class="card-text" style="font-family:Andika; font-weight:700; color: white;">{{movie.movie_name}}</p>
-                                <p class="card-text" style="font-family:Andika; font-weight:500; color: white;">Genre: {{movie.movie_genre}}<br>Language: {{movie.movie_language}}</p>
+                                <p class="card-text" style="font-weight:700;">{{movie.movie_name}}</p>
+                                <p class="card-text" style="font-weight:500;">Genre: {{movie.movie_genre}}<br>Language: {{movie.movie_language}}</p>
 
-                                <a href="#" class="btn btn-success">Book Now</a>
+                                <button class="btn btn-success" (click)="selectMovie(movie)">Book Now</button>
                             </div>
+
 
                         </div>
 
@@ -33,29 +34,30 @@
 
     </div>
     <div class="row">
-        <div class="card" style="margin-top:25px; margin-bottom:25px"></div>
+        <div class="card card-1"></div>
 
         <div class="container text-center">
-            <h1 class="badge text-bg-info" style="font-size:larger">Plays</h1>
+            <h1 class="badge text-bg-info">Plays</h1>
 
         </div>
 
         <div class="card-body">
             <div class="container-fluid">
-                <div class="row" style="background-color: #FDF5EA;">
+                <div class="row play-row">
                     <div class="col-3" *ngFor="let play of playsList">
 
-                        <div class="card" style="width: 18rem; margin-bottom: 25px ; background-color: #34403A;">
+                        <div class="card" style="width: 18rem; margin: 35px ; background-color: #34403A;">
                             <img src="{{play.play_poster}}" class="card-img-top" style="height:250px; width: 150px margin
                         25px;">
                             <div class="card-body">
-                                <p class="card-text" style="font-family:Andika; font-weight:700; color: white;">{{play.play_name}}</p>
-                                <p class="card-text" style="font-family:Andika; font-weight:500; color: white;">Genre: {{play.play_genre}}<br>Language: {{play.play_language}}</p>
+                                <p class="card-text" style="font-weight:700;">{{play.play_name}}</p>
+                                <p class="card-text" style="font-weight:500;">Genre: {{play.play_genre}}<br>Language: {{play.play_language}}</p>
 
-                                <a href="#" class="btn btn-success">Book Now</a>
+                                <button class="btn btn-success" (click)="selectPlay(play)">Book Now</button>
                             </div>
 
                         </div>
+
 
                     </div>
 

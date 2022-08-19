@@ -2,21 +2,24 @@
     <div class="card">
         <h1>Confirm Booking</h1>
         <div class="card-body">
+            <div class="card align-items-center d-flex justify-content-center" style="margin: 25px; border-radius:15px;">
+
+                <img src="{{bookedPlay.play_poster}}" style="height: 250px ; width:250px; margin: 15px;">
+            </div>
             <div class="container">
-                <form>
+                <form [formGroup]="form" (ngSubmit)="submitForm()">
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
 
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your name:">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your name:" formControlName="name">
 
                             </div>
                         </div>
                         <div class="col">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="username" aria-label="Username">
-                                <span class="input-group-text">@</span>
-                                <input type="text" class="form-control" placeholder="domain" aria-label="Server">
+                                <input type="text" class="form-control" placeholder="username" aria-label="Username" formControlName="email">
+
                             </div>
 
                         </div>
@@ -25,7 +28,7 @@
                         <div class="col-3">
                             <div class="mb-3">
 
-                                <input class="form-control" id="inputPhoneNumber" placeholder="your phone:">
+                                <input class="form-control" id="inputPhoneNumber" placeholder="your phone:" formControlName="phone">
 
                             </div>
 
@@ -33,7 +36,7 @@
                         <div class="col-3">
                             <div class="mb-3">
                                 <select class="form-select" aria-label="Disabled select example" disabled>
-                                    <option selected>Movie </option>
+                                    <option  selected>{{bookedPlay.play_name}} </option>
                             </select>
                             </div>
 
@@ -41,7 +44,7 @@
                         <div class="col-3">
                             <div class="mb-3">
                                 <select class="form-select" aria-label="Disabled select example" disabled>
-                                    <option selected>Date & Time</option>
+                                    <option selected>21 August | 17.30</option>
                             </select>
                             </div>
 
@@ -49,7 +52,7 @@
                         <div class="col-3">
                             <div class="mb-3">
                                 <select class="form-select" aria-label="Disabled select example" disabled>
-                                    <option selected>Seat Nos.</option>
+                                    <option   selected>Seat Nos.</option>
                             </select>
                             </div>
 

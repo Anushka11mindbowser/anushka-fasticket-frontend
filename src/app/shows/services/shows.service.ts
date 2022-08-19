@@ -11,6 +11,7 @@ export class ShowsService {
   movie_list_url = "http://127.0.0.1:8000/shows/moviesList"
   plays_list_url = "http://127.0.0.1:8000/shows/playsList"
   
+  
 
   constructor(private http:HttpClient) { }
 
@@ -22,4 +23,5 @@ export class ShowsService {
     return this.http.get<any>(this.plays_list_url)
   }
 
+ 
 }
