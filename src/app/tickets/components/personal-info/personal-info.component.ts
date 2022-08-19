@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IndivisualShowsService } from '../../services/indivisual-shows.service';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -27,9 +27,10 @@ export class PersonalInfoComponent implements OnInit {
       name: [''],
       email:[''],
       phone:[''],
-      movie:[''],
+      movie: new FormControl({value:this.bookedMovie.movie_name , disabled: true}),
       datetime:[''],
       seat_no:['']
+
 
     })
   }
