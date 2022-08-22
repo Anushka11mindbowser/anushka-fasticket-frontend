@@ -35,26 +35,17 @@
                         </div>
                         <div class="col-3">
                             <div class="mb-3">
-                                <input class="form-control" type="text" formControlName="movie" readonly>
+                                <input class="form-control" id="inputMovie" placeholder={{bookedMovie.movie_name}} formControlName="show" readonly>
                             </div>
 
                         </div>
                         <div class="col-3">
                             <div class="mb-3">
-                                <select class="form-select" aria-label="Disabled select example" disabled>
-                                    <option selected>21 August | 17.30</option>
-                            </select>
+                                <input class="form-control" id="inputDateTime" placeholder="21 August | 17.30" formControlName="show" readonly>
                             </div>
 
                         </div>
-                        <div class="col-3">
-                            <div class="mb-3">
-                                <select class="form-select" aria-label="Disabled select example" disabled>
-                                    <option   selected>Seat Nos.</option>
-                            </select>
-                            </div>
 
-                        </div>
                     </div>
                     <button class="btn btn-info">Confirm Booking</button>
                 </form>

@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { IndivisualShowsService } from '../../services/indivisual-shows.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-confirm-play-booking',
@@ -24,11 +24,11 @@ export class ConfirmPlayBookingComponent implements OnInit {
     public fb: FormBuilder
   ) {
     this.form = this.fb.group({
-      name: [''],
+      name:  [''],
       email: [''],
       phone: [''],
-      movie: [''],
-      datetime: [''],
+      show: [''],
+      
       seat_no: [''],
     });
   }
@@ -45,8 +45,8 @@ export class ConfirmPlayBookingComponent implements OnInit {
     formData.append('name', this.form.get('name')?.value);
     formData.append('email', this.form.get('email')?.value);
     formData.append('phone', this.form.get('phone')?.value);
-    formData.append('movie', this.form.get('movie')?.value);
-    formData.append('datetime', this.form.get('datetime')?.value);
+    formData.append('show', this.form.get('show')?.value);
+    // formData.append('datetime', this.form.get('datetime')?.value);
     formData.append('seat_no', this.form.get('seat_no')?.value);
     this.http
       .post('http://127.0.0.1:8000/bookings/createBooking', formData)

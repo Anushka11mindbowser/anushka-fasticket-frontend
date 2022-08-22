@@ -4,6 +4,9 @@ import { ShowsModule } from './shows/shows.module';
 
 const routes: Routes = [
   {
+    path:"", loadChildren:()=>import('./home/home.module').then(mod=>mod.HomeModule)
+  },
+  {
     path:"shows", loadChildren:()=>import('./shows/shows.module').then(mod=>mod.ShowsModule)
   },
   {

@@ -27,8 +27,8 @@ export class PersonalInfoComponent implements OnInit {
       name: [''],
       email:[''],
       phone:[''],
-      movie: new FormControl({value:this.bookedMovie.movie_name , disabled: true}),
-      datetime:[''],
+      show: [''],
+      
       seat_no:['']
 
 
@@ -40,6 +40,7 @@ export class PersonalInfoComponent implements OnInit {
     this.indivisualShow.getIndivisualMovie(this.id).subscribe((data) => {
       this.bookedMovie = data.data;
     });
+    console.log(this.booked_seats)
   }
 
   submitForm(){
@@ -47,8 +48,8 @@ export class PersonalInfoComponent implements OnInit {
     formData.append('name', this.form.get('name')?.value)
     formData.append('email', this.form.get('email')?.value)
     formData.append('phone', this.form.get('phone')?.value)
-    formData.append('movie', this.form.get('movie')?.value)
-    formData.append('datetime', this.form.get('datetime')?.value)
+    formData.append('show', this.form.get('show')?.value)
+    
     formData.append('seat_no', this.form.get('seat_no')?.value)
     this.http.post("http://127.0.0.1:8000/bookings/createBooking",formData).subscribe((response)=>console.log(response),
     (error)=>console.log(error))

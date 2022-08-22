@@ -41,7 +41,7 @@ export class ShowListComponent implements OnInit {
    }
 
   selectPlay(play: any) {
-    this.router.navigate(['/tickets/book-seats' + '/' + play.id]);
+    this.router.navigate(['/tickets/book-play-seats' + '/' + play.id]);
     console.log(play.id)
   }
 }
