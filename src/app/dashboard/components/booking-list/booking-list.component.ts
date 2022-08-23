@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { BookingListService } from '../../services/booking-list.service';
 
 @Component({
@@ -8,16 +9,23 @@ import { BookingListService } from '../../services/booking-list.service';
 })
 export class BookingListComponent implements OnInit {
   bookingsList: any = [];
+  reversedBookingList:any = []
+  
   constructor(private bl: BookingListService) {}
 
   ngOnInit(): void {
     this.getAllBookings();
+   
+    
+    
   }
 
   getAllBookings() {
     this.bl.getBookingList().subscribe((data) => {
       this.bookingsList = data.data;
-      console.log(this.bookingsList);
+      this.reversedBookingList = this.bookingsList.reverse()
+      console.log(this.reversedBookingList)
+      
     });
   }
 }

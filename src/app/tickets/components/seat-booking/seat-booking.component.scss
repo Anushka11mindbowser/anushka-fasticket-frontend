@@ -87,3 +87,29 @@
     margin-top: 85px;
     color: white;
 }
+
+@media only screen and (max-width:640px) {
+    .col-1 {
+        width: 20px;
+        height: 20px;
+        margin: 7px;
+    }
+    .seat-row {
+        margin-left: 20px;
+    }
+    .index {
+        width: 100px;
+        height: 150px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+    .empty-seats {
+        font-size: xx-small;
+    }
+    .selected-seats {
+        font-size: xx-small;
+    }
+    button {
+        margin-left: px;
+    }
+}

@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="card card-1"></div>
+
 
         <div class="container text-center">
             <p class="badge text-bg-info">Movies</p>
@@ -12,7 +12,7 @@
                 <div class="row movie-row">
                     <div class="col-3" *ngFor="let movie of moviesList">
 
-                        <div class="card movie-card" style="width: 18rem; margin: 35px ; background-color: #34403A;">
+                        <div class="card movie-card">
                             <img src="{{movie.movie_poster}}" class="card-img-top" style="height:250px; width: 150px margin
                         25px;">
                             <div class="card-body">
@@ -34,7 +34,7 @@
 
     </div>
     <div class="row">
-        <div class="card card-1"></div>
+
 
         <div class="container text-center">
             <h1 class="badge text-bg-info">Plays</h1>
@@ -46,7 +46,7 @@
                 <div class="row play-row">
                     <div class="col-3" *ngFor="let play of playsList">
 
-                        <div class="card" style="width: 18rem; margin: 35px ; background-color: #34403A;">
+                        <div class="card">
                             <img src="{{play.play_poster}}" class="card-img-top" style="height:250px; width: 150px margin
                         25px;">
                             <div class="card-body">

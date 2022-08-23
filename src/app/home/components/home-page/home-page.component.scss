@@ -1,6 +1,6 @@
 .container-fluid {
     background-color: #F8CB46;
-    height: 100vh;
+    height: 640px;
 }
 
 .text {
@@ -8,4 +8,10 @@
     display: grid;
     color: white;
     font-family: "Andika", sans-serif;
+}
+
+@media only screen and (max-width:640px) {
+    .container-fluid {
+        height: 550px;
+    }
 }

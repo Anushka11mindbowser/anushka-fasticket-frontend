@@ -3,17 +3,18 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }
 
-.card-1 {
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
 .text-center {
     font-size: larger
 }
 
 .movie-row {
     background-color: #EBE1DF;
+}
+
+.card {
+    width: 18rem;
+    margin: 35px;
+    background-color: #34403A;
 }
 
 .card-text {
@@ -27,4 +28,37 @@
 
 .text-bg-info {
     font-size: larger;
+    margin: 15px;
+}
+
+@media only screen and (max-width:640px) {
+    .card {
+        width: 130px;
+        margin-top: 25px;
+        margin: 5px;
+        background-color: #34403A;
+    }
+    img {
+        width: 130px;
+        height: 100px;
+    }
+    .card-body {
+        width: 170px;
+    }
+    .card-body p {
+        font-size: xx-small;
+        font-weight: 100;
+        margin: 0px;
+        text-align: left;
+    }
+    .movie-row {
+        width: 100%;
+        margin: 0px;
+    }
+    button {
+        margin-top: 15px;
+        height: 25px;
+        font-size: xx-small;
+        font-weight: 100;
+    }
 }
