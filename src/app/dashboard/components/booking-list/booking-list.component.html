@@ -3,7 +3,9 @@
         <div class="card-body" style="background-color: #5a62dc">
             <div class="row" style="border: 2px solid black; color: white; border: none">
                 <div class="col-2">Booking ID</div>
+                <div class="col-2">Tickets</div>
                 <div class="col-4">Customer Details</div>
+                <div class="col-4">Show Details</div>
             </div>
         </div>
     </div>
@@ -16,13 +18,29 @@
                     </h4>
                 </div>
 
+                <div class="col-2">
+                    <h4>
+                        <span class="badge text-bg-primary"></span>
+                    </h4>
+                </div>
+
 
                 <div class="col-4">
                     <div class="card mb-3" style="background-color: #a0a6be; color: white">
                         <div class="card-body">
-                            <h5 class="card-title">User Details</h5>
+                            <h5 class="card-title"><span>User Details</span></h5>
                             <p class="card-text">
-                                {{ bl.name }}<br />{{ bl.email }}<br />Phone: {{bl.phone}} <br> Booked At: {{ bl.booked_at }}
+                                {{ bl.name }}<br />{{ bl.email }}<br />Phone: {{bl.phone}} <br>Booked At: {{ bl.booked_at }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-3" style="background-color: #a0a6be; color: white; margin-top: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title"><span>Show Details</span></h5>
+                            <p class="card-text">
+                                Show: {{ bl.show }}<br />Date: 21 Aug 2022 | 17.30<br /> Seats: {{bl.seat_nos}}
                             </p>
                         </div>
                     </div>

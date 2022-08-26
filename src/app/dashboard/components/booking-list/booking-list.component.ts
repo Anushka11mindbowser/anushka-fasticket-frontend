@@ -10,6 +10,7 @@ import { BookingListService } from '../../services/booking-list.service';
 export class BookingListComponent implements OnInit {
   bookingsList: any = [];
   reversedBookingList:any = []
+  ticket_no:any;
   
   constructor(private bl: BookingListService) {}
 

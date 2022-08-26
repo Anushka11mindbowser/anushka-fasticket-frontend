@@ -9,18 +9,20 @@ import { SeatBookingComponent } from './components/seat-booking/seat-booking.com
 const routes: Routes = [
   {
     path:"book-seats/:data.id", component:SeatBookingComponent,
-    canActivate:[AuthGuard]
+   
   },
   {
-    path:"personal-info/:data.id", component:PersonalInfoComponent
+    path:"personal-info/:data.id", component:PersonalInfoComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:"book-play-seats/:data.id", component:BookPlaySeatsComponent,
-    canActivate:[AuthGuard]
+    
 
   },
   {
-    path:"confirm-play-booking/:data.id", component:ConfirmPlayBookingComponent
+    path:"confirm-play-booking/:data.id", component:ConfirmPlayBookingComponent,
+    canActivate:[AuthGuard]
   }
   
 ];

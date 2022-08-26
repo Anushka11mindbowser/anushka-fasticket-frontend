@@ -7,7 +7,7 @@
                 <img src="{{bookedPlay.play_poster}}" style="height: 250px ; width:250px; margin: 15px;">
             </div>
             <div class="container">
-                <form [formGroup]="form" (ngSubmit)="submitForm()">
+                <form [formGroup]="myForm" (ngSubmit)="submitForm(myForm)">
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
@@ -41,8 +41,14 @@
                         </div>
                         <div class="col-3">
                             <div class="mb-3">
-                                <input class="form-control datetime" id="inputShow" placeholder="21 Aug 2022 | 17.30" formControlName="show" readonly>
+                                <input class="form-control datetime" id="inputShow" placeholder="21 Aug 2022 | 17.30" formControlName="datetime" readonly>
 
+                            </div>
+
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <input class="form-control seats" id="inputSeats" placeholder="{{booked_seats}}" formControlName="seat_nos" readonly>
                             </div>
 
                         </div>

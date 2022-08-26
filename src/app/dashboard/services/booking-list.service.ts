@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookingListService {
 
-  booking_list_url = "http://127.0.0.1:8000/bookings/getBookings";
+  booking_list_url = environment.get_bookings_url;
 
   constructor(private http:HttpClient) {}
 

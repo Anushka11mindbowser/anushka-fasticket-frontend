@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -8,8 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class ShowsService {
 
-  movie_list_url = "http://127.0.0.1:8000/shows/moviesList"
-  plays_list_url = "http://127.0.0.1:8000/shows/playsList"
+  movie_list_url = environment.movies_list_url
+  plays_list_url = environment.plays_list_url
   
   
 

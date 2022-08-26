@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  title: "Local Enviornments",
+  get_bookings_url : "http://127.0.0.1:8000/bookings/getBookings",
+  movies_list_url : "http://127.0.0.1:8000/shows/moviesList",
+  plays_list_url : "http://127.0.0.1:8000/shows/playsList",
+  create_booking_url: "http://127.0.0.1:8000/bookings/createBooking"
 };
 
 /*

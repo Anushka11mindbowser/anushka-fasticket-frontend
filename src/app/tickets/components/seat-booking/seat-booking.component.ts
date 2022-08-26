@@ -1,4 +1,6 @@
+
 import { Component, HostListener, OnInit } from '@angular/core';
+import { FormArray } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IndivisualShowsService } from '../../services/indivisual-shows.service';
 
@@ -21,6 +23,8 @@ export class SeatBookingComponent implements OnInit {
   count  =  document.getElementById('count')
   seat_quantity:any
   seat_array:any = []
+  seatIndex:any =[]
+  
   amount:any
  
 
@@ -42,19 +46,35 @@ onClick(element: HTMLElement) {
    this.indivisualShow.getIndivisualMovie(this.movie_id).subscribe((data)=>{
     this.selectedMovie = data.data
    })
+   
+   
    }
     
     getSelectedSeats(){
      const selectedSeat = document.querySelectorAll('.row .col-1.selected')
-     const seat = document.querySelectorAll('.row .col-1.selected')
+     const seats = document.querySelectorAll('.row .col-1')
+     this.seat_array = Array.from(selectedSeat)
+      let all_seats_array:any = []
+     all_seats_array = Array.from(seats)
+
      
-     
-     this.seat_quantity = selectedSeat.length - 1
-     this.amount = 200 * this.seat_quantity
-     
-     console.log(selectedSeat)
-     
+      this.seatIndex = [...this.seat_array].map(function(seat){
+      return [...all_seats_array].indexOf(seat)
+     })
+
+
+    this.seat_quantity = selectedSeat.length 
+    localStorage.setItem('ticket_no', this.seat_quantity)
     
+     this.amount = 200 * this.seat_quantity
+     for (let i in selectedSeat){
+      this.seat_array.push(selectedSeat[i].id)
+     }
+     
+     localStorage.setItem("seats",this.seatIndex)
+
+     console.log(this.seatIndex)
+     
   }
 
     goToPayment(movie:any){
