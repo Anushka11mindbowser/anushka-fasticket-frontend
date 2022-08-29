@@ -13,7 +13,7 @@
 <div class="container-fluid">
 
 
-    <div class="row" style="margin: 25px;">
+    <div class="row theatre">
         <div class="col-10">
 
 
@@ -23,7 +23,7 @@
 
             <div class="container" id="container">
 
-                <div class="screen" style="margin-bottom: 25px;">
+                <div class="screen">
                 </div>
 
 
@@ -98,7 +98,7 @@
                     <div class="card-body">
 
                         <div class="empty-seats">
-                            <div class="col-1" style="margin:5px;"></div>
+                            <div class="col-1 sidebar"></div>
                             <p>Empty Seats</p>
                         </div>
 
@@ -115,6 +115,6 @@
     </div>
 </div>
 
-<div class="container-fluid" style="margin-top:25px;">
+<div class="container-fluid confirm-button">
     <button class="btn btn-success" (click)="goToPayment(selectedPlay)">Pay Rs.200 x {{seat_quantity}} = Rs. {{amount}}</button>
 </div>

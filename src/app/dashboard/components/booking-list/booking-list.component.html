@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="card">
-        <div class="card-body" style="background-color: #5a62dc">
-            <div class="row" style="border: 2px solid black; color: white; border: none">
+        <div class="card-body head-card-body">
+            <div class="row head-row">
                 <div class="col-2">Booking ID</div>
                 <div class="col-2">Tickets</div>
                 <div class="col-4">Customer Details</div>
@@ -11,7 +11,7 @@
     </div>
     <div class="card">
         <div class="card-body">
-            <div class="row" style="border: none" *ngFor="let booking of reversedBookingList">
+            <div class="row show-list" *ngFor="let booking of reversedBookingList">
                 <div class="col-2">
                     <h4>
                         <span class="badge text-bg-primary">{{ booking.id }}</span>
@@ -26,7 +26,7 @@
 
 
                 <div class="col-4">
-                    <div class="card mb-3" style="background-color: #a0a6be; color: white">
+                    <div class="card mb-3 details">
                         <div class="card-body">
                             <h5 class="card-title"><span>User Details</span></h5>
                             <p class="card-text">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card mb-3" style="background-color: #a0a6be; color: white; margin-top: 15px;">
+                    <div class="card mb-3 details">
                         <div class="card-body">
                             <h5 class="card-title"><span>Show Details</span></h5>
                             <p class="card-text">

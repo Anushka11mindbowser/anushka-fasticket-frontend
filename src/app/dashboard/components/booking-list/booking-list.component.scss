@@ -9,3 +9,22 @@
         color: $booking-card-title;
         font-weight: 900;
     }
+    
+    .head-card-body {
+        background-color: $head-card-background;
+    }
+    
+    .head-row {
+        border: 2px solid $head-row-background;
+        color: $head-row;
+        border: none;
+    }
+    
+    .details {
+        background-color: $booking-list-card;
+        color: $booking-list-details;
+    }
+    
+    .show-list {
+        border: none;
+    }

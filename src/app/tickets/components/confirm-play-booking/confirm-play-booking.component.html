@@ -2,9 +2,9 @@
     <div class="card">
         <h1>Confirm Booking</h1>
         <div class="card-body">
-            <div class="card align-items-center d-flex justify-content-center" style="margin: 25px; border-radius:15px;">
+            <div class="card card-img align-items-center d-flex justify-content-center">
 
-                <img src="{{bookedPlay.play_poster}}" style="height: 250px ; width:250px; margin: 15px;">
+                <img class="show-img" src="{{bookedPlay.play_poster}}">
             </div>
             <div class="container">
                 <form [formGroup]="myForm" (ngSubmit)="submitForm(myForm)">

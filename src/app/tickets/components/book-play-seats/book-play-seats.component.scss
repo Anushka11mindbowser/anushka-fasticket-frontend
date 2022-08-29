@@ -12,7 +12,6 @@
     background-color: $selected_seats;
     height: 20px;
     width: 20px;
-    // margin: 5px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     display: flex;
@@ -23,10 +22,15 @@
     transform: scale(1.2)
 }
 
+.theatre {
+    margin: 25px;
+}
+
 .screen {
     background-color: $screen;
     height: 70px;
     margin-top: 50px;
+    margin-bottom: 25px;
     transform: rotateX(-45deg);
     box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.75);
 }
@@ -75,6 +79,15 @@
     margin-left: 25px;
     margin-top: 85px;
     color: $index-text;
+}
+
+.sidebar {
+    margin: 5px;
+}
+
+.confirm-button {
+    margin-left: 25px;
+    position: absolute;
 }
 
 @media only screen and (max-width:640px) {

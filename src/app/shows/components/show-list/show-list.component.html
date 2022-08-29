@@ -13,11 +13,10 @@
                     <div class="col-3" *ngFor="let movie of moviesList">
 
                         <div class="card movie-card">
-                            <img src="{{movie.movie_poster}}" class="card-img-top" style="height:250px; width: 150px margin
-                        25px;">
+                            <img src="{{movie.movie_poster}}" class="card-img-top">
                             <div class="card-body">
-                                <p class="card-text" style="font-weight:700;">{{movie.movie_name}}</p>
-                                <p class="card-text" style="font-weight:500;">Genre: {{movie.movie_genre}}<br>Language: {{movie.movie_language}}</p>
+                                <p class="card-text show-title">{{movie.movie_name}}</p>
+                                <p class="card-text show-info">Genre: {{movie.movie_genre}}<br>Language: {{movie.movie_language}}</p>
 
                                 <button class="btn btn-success" (click)="selectMovie(movie)">Book Now</button>
                             </div>
@@ -47,11 +46,10 @@
                     <div class="col-3" *ngFor="let play of playsList">
 
                         <div class="card">
-                            <img src="{{play.play_poster}}" class="card-img-top" style="height:250px; width: 150px margin
-                        25px;">
+                            <img src="{{play.play_poster}}" class="card-img-top">
                             <div class="card-body">
-                                <p class="card-text" style="font-weight:700;">{{play.play_name}}</p>
-                                <p class="card-text" style="font-weight:500;">Genre: {{play.play_genre}}<br>Language: {{play.play_language}}</p>
+                                <p class="card-text show-title">{{play.play_name}}</p>
+                                <p class="card-text show-info">Genre: {{play.play_genre}}<br>Language: {{play.play_language}}</p>
 
                                 <button class="btn btn-success" (click)="selectPlay(play)">Book Now</button>
                             </div>
