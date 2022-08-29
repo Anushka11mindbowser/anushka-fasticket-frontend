@@ -11,16 +11,16 @@
     </div>
     <div class="card">
         <div class="card-body">
-            <div class="row" style="border: none" *ngFor="let bl of reversedBookingList">
+            <div class="row" style="border: none" *ngFor="let booking of reversedBookingList">
                 <div class="col-2">
                     <h4>
-                        <span class="badge text-bg-primary">{{ bl.id }}</span>
+                        <span class="badge text-bg-primary">{{ booking.id }}</span>
                     </h4>
                 </div>
 
                 <div class="col-2">
                     <h4>
-                        <span class="badge text-bg-primary"></span>
+                        <span class="badge text-bg-primary">{{booking.ticket_no}}</span>
                     </h4>
                 </div>
 
@@ -30,7 +30,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><span>User Details</span></h5>
                             <p class="card-text">
-                                {{ bl.name }}<br />{{ bl.email }}<br />Phone: {{bl.phone}} <br>Booked At: {{ bl.booked_at }}
+                                {{ booking.name }}<br />{{ booking.email }}<br />Phone: {{booking.phone}} <br>Booked At: {{ booking.booked_at }}
                             </p>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><span>Show Details</span></h5>
                             <p class="card-text">
-                                Show: {{ bl.show }}<br />Date: 21 Aug 2022 | 17.30<br /> Seats: {{bl.seat_nos}}
+                                Show: {{ booking.show }}<br />Date: 21 Aug 2022 | 17.30<br /> Seats: {{booking.seat_nos}}
                             </p>
                         </div>
                     </div>

@@ -18,6 +18,8 @@ export class SeatBookingComponent implements OnInit {
   movie_id:any
   selectedMovie:any
   
+  
+  
  
 
   count  =  document.getElementById('count')
@@ -46,6 +48,8 @@ onClick(element: HTMLElement) {
    this.indivisualShow.getIndivisualMovie(this.movie_id).subscribe((data)=>{
     this.selectedMovie = data.data
    })
+ 
+   
    
    
    }

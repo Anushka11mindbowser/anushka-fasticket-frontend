@@ -17,7 +17,7 @@ export class PersonalInfoComponent implements OnInit {
   booked_seats:any =[]
  
   bookedMovie: any;
-  tickets_no:any
+  ticket_no:any
   id: any;
   myForm: FormGroup;
  
@@ -39,8 +39,8 @@ export class PersonalInfoComponent implements OnInit {
       this.bookedMovie = data.data;
      
       this.booked_seats = localStorage.getItem('seats');
-      this.tickets_no = this.booked_seats.length - 1
-      console.log(this.tickets_no)
+      this.ticket_no = this.booked_seats.length - 1
+      console.log(this.ticket_no)
 
 
 
@@ -49,7 +49,7 @@ export class PersonalInfoComponent implements OnInit {
         email: new FormControl(''),
         phone: new FormControl(''),
         show : new FormControl(this.bookedMovie.movie_name),
-        tickets_no: new FormControl(this.tickets_no),
+        ticket_no: new FormControl(this.ticket_no),
         datetime: new FormControl('21 Aug 2022 | 17.30'),
         seat_nos: new FormControl(this.booked_seats),
        
@@ -67,7 +67,7 @@ export class PersonalInfoComponent implements OnInit {
     formData.append('email',form.value.email )
     formData.append('phone', form.value.phone)
     formData.append('show',  form.value.show)
-    formData.append('tickets_no', form.value.tickets_no)
+    formData.append('ticket_no', form.value.ticket_no)
     formData.append('datetime', form.value.show)
     formData.append('seat_nos', form.value.seat_nos)
     this.http.post( this.create_booking_url,formData).subscribe((response)=>console.log(response),

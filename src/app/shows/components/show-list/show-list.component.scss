@@ -1,3 +1,4 @@
+@import "../../../../styles/variables.scss";
 .col-3 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
@@ -8,22 +9,21 @@
 }
 
 .movie-row {
-    background-color: #EBE1DF;
+    background-color: $movie-row;
 }
 
 .card {
     width: 18rem;
     margin: 35px;
-    background-color: #34403A;
+    background-color: $show-card-background;
 }
 
 .card-text {
-    font-family: 'Andika', sans-serif;
-    color: white;
+    color: $show-card-text;
 }
 
 .play-row {
-    background-color: #FDF5EA;
+    background-color: $play-row;
 }
 
 .text-bg-info {
@@ -36,7 +36,7 @@
         width: 130px;
         margin-top: 25px;
         margin: 5px;
-        background-color: #34403A;
+        background-color: $show-card-background;
     }
     img {
         width: 130px;

@@ -1,3 +1,4 @@
+@import "../../styles/variables.scss";
 .navbar-brand {
     display: flex;
 }
@@ -5,7 +6,7 @@
 .navbar-brand p {
     margin: 5px;
     font-family: 'Jura', sans-serif;
-    color: white;
+    color: $brand-text;
 }
 
 button {

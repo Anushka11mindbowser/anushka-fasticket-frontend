@@ -1,17 +1,14 @@
-    .card {
-        font-family: 'Andika', sans-serif;
-    }
-    
+    @import "../../../../styles/variables.scss";
     h1 {
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid $confirm-booking-heading;
         width: fit-content;
         margin: 25px;
-        color: #3f898b
+        color: $confirm-booking-heading;
     }
     
     input {
         border-radius: 15px;
-        border: 2px solid #343361;
+        border: 2px solid $confirm-booking-input-border;
     }
     
     .name {
@@ -73,6 +70,6 @@
             border-radius: 15px;
         }
         .card {
-            background-color: #E7E5E5;
+            background-color: $responsive-confirm-booking-card;
         }
     }

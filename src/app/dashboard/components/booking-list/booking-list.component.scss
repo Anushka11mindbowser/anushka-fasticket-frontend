@@ -1,21 +1,11 @@
-.card-body h1 {
-    width: 235px;
-    border-bottom: 2px soild black;
-    color: #4c5270;
-    font-family: "Sora", sans-serif;
-    border-bottom: 4px solid #bcece0;
-}
-
-.card-body {
-    font-family: "Zilla Slab", serif;
-}
-
-.container-fluid {
-    margin-top: 35px;
-}
-
-;
-.card-title span {
-    color: #432371;
-    font-weight: 900;
-}
+    @import "../../../../styles/variables.scss";
+    .card-body h1 {
+        width: 235px;
+        border-bottom: 2px soild black;
+        color: $booking-list-card;
+    }
+    
+    .container-fluid span {
+        color: $booking-card-title;
+        font-weight: 900;
+    }

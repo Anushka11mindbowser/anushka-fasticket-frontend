@@ -1,24 +1,15 @@
+@import "../../../../../src/styles/variables.scss";
 .col-1 {
     height: 20px;
     width: 20px;
     margin: 25px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: grey;
-}
-
-.booked {
-    background-color: #FED766;
-    height: 20px;
-    width: 20px;
-    // margin: 5px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    display: flex;
+    background-color: $available_seats;
 }
 
 .selected {
-    background-color: #009FB7;
+    background-color: $selected_seats;
     height: 20px;
     width: 20px;
     // margin: 5px;
@@ -33,7 +24,7 @@
 }
 
 .screen {
-    background-color: white;
+    background-color: $screen;
     height: 70px;
     margin-top: 50px;
     transform: rotateX(-45deg);
@@ -50,14 +41,12 @@
 
 .movie-info span {
     font-weight: 700;
-    font-family: 'Andika', sans-serif;
-    color: black;
+    color: $theatre_show_info;
 }
 
 .movie-info p {
     font-weight: 500;
-    font-family: 'Andika', sans-serif;
-    color: cornflowerblue;
+    color: $theatre_show_title;
 }
 
 .ticket-counter {
@@ -71,21 +60,21 @@
 }
 
 .col-10 {
-    background-color: #0A1128;
+    background-color: $movie_theatre_background;
     margin-top: 20px;
 }
 
 .col-2 {
-    background-color: #E2E8EB;
+    background-color: $movie_thetre_sidebar;
     margin-top: 20px;
 }
 
 .index {
-    background-color: #56494C;
+    background-color: $index;
     width: 200px;
     margin-left: 25px;
     margin-top: 85px;
-    color: white;
+    color: $index-text;
 }
 
 @media only screen and (max-width:640px) {

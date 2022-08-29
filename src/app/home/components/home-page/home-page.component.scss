@@ -1,13 +1,13 @@
+@import "../../../../styles/variables.scss";
 .container-fluid {
-    background-color: #F8CB46;
+    background-color: $main-theme;
     height: 640px;
 }
 
 .text {
     margin: auto;
     display: grid;
-    color: white;
-    font-family: "Andika", sans-serif;
+    color: $home-page-text
 }
 
 @media only screen and (max-width:640px) {
