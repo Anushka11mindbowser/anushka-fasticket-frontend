@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { IndivisualShowsService } from '../../services/indivisual-shows.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-confirm-play-booking',
@@ -17,6 +17,7 @@ export class ConfirmPlayBookingComponent implements OnInit {
   bookedPlay: any;
   id: any;
   tickets_no:any
+  ticket_price:any
   myForm: FormGroup;
 
   constructor(
@@ -34,18 +35,33 @@ export class ConfirmPlayBookingComponent implements OnInit {
       this.bookedPlay = data.data;
 
       this.booked_seats = localStorage.getItem('seats');
+      this.tickets_no = localStorage.getItem('ticket_no')
+      this.ticket_price = localStorage.getItem('ticket_price')
+      console.log(this.ticket_price)
 
       this.myForm = this.fb.group({
-        name: new FormControl(''),
-        email: new FormControl(''),
-        phone: new FormControl(''),
+        name: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required, Validators.email]),
+        phone: new FormControl('', [Validators.required, Validators.pattern(/^[0-9]\d*$/), Validators.minLength(10), Validators.maxLength(10)]),
         show : new FormControl(this.bookedPlay.play_name),
-        datetime: new FormControl('21 Aug 2022 | 17.30'),
+        show_date: new FormControl(this.bookedPlay.play_date),
+        show_time: new FormControl(this.bookedPlay.play_time),
         seat_nos: new FormControl(this.booked_seats),
+        show_theatre: new FormControl(this.bookedPlay.play_theatre),
+        screen_no: new FormControl(this.bookedPlay.stage_no),
+        ticket_no: new FormControl(this.tickets_no),
+        ticket_price: new FormControl(this.ticket_price)
+
+
+        
+        
        
 
 
       })
+      console.log(this.bookedPlay)
+    }, error=>{
+      console.log("Error" + error)
     });
   }
 
@@ -55,10 +71,28 @@ export class ConfirmPlayBookingComponent implements OnInit {
     formData.append('email',form.value.email )
     formData.append('phone', form.value.phone)
     formData.append('show',  form.value.show)
-    formData.append('datetime', form.value.show)
+    formData.append('show_date', form.value.show_date),
+    formData.append('show_time', form.value.show_time),
     formData.append('seat_nos', form.value.seat_nos)
+    formData.append('show_theatre',form.value.show_theatre)
+    formData.append('screen_no', form.value.screen_no)
+    formData.append('ticket_no', form.value.ticket_no)
+    formData.append('ticket_price', form.value.ticket_price)
     this.http.post( this.create_booking_url,formData).subscribe((response)=>console.log(response),
     (error)=>console.log(error))
+  }
+  get name(){
+    console.log(this.myForm.get('name'))
+    return this.myForm.get('name')
+    
+  }
+
+  get email(){
+    return this.myForm.get('email')
+  }
+
+  get phone(){
+    return this.myForm.get('phone')
   }
 }
 

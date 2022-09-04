@@ -38,7 +38,9 @@ constructor(private ar:ActivatedRoute, private indivisualShow:IndivisualShowsSer
     this.play_id = this.ar.snapshot.params['data.id']
    this.indivisualShow.getIndivisualPlay(this.play_id).subscribe((data)=>{
     this.selectedPlay = data.data
-})
+}, error =>{
+  console.log("Error" + error)
+  });
    console.log(this.seat_quantity)
    console.log(this.seat_array)
 
@@ -57,7 +59,7 @@ constructor(private ar:ActivatedRoute, private indivisualShow:IndivisualShowsSer
     })
 
 this.seat_quantity = selectedSeat.length 
-localStorage.setItem('ticket_no', this.seat_quantity)
+
    
     this.amount = 200 * this.seat_quantity
     for (let i in selectedSeat){
@@ -65,6 +67,8 @@ localStorage.setItem('ticket_no', this.seat_quantity)
     }
     
     localStorage.setItem("seats",this.seatIndex)
+    localStorage.setItem('ticket_no', this.seat_quantity)
+  localStorage.setItem('ticket_price', this.amount)
 
     console.log(this.seatIndex)
   }

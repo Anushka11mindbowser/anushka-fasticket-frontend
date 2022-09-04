@@ -26,6 +26,8 @@ export class ShowListComponent implements OnInit {
     this.showService.getMoviesList().subscribe((data) => {
       this.moviesList = data.data;
       
+      }, error =>{
+        console.log("Error: " + console.log(error))
       });
     
     }
@@ -33,6 +35,9 @@ export class ShowListComponent implements OnInit {
   getAllPlays() {
     this.showService.getPlaysList().subscribe((data) => {
       this.playsList = data.data;
+      console.log(this.playsList)
+    }, error =>{
+      console.log("Error: " + console.log(error))
     });
   }
 

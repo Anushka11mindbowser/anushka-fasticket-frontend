@@ -47,7 +47,12 @@ onClick(element: HTMLElement) {
    this.movie_id = this.ar.snapshot.params['data.id']
    this.indivisualShow.getIndivisualMovie(this.movie_id).subscribe((data)=>{
     this.selectedMovie = data.data
+    console.log(this.selectedMovie)
+   }, error =>{
+    console.log("Error" + error)
    })
+  
+ 
  
    
    
@@ -76,6 +81,7 @@ onClick(element: HTMLElement) {
      }
      
      localStorage.setItem("seats",this.seatIndex)
+     localStorage.setItem('amount', this.amount)
 
      console.log(this.seatIndex)
      

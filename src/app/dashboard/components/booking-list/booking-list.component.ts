@@ -27,6 +27,8 @@ export class BookingListComponent implements OnInit {
       this.reversedBookingList = this.bookingsList.reverse()
       console.log(this.reversedBookingList)
       
+    }, error=>{
+          console.log("Error" + error)
     });
   }
 }

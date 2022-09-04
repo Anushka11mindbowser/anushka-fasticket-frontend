@@ -1,11 +1,17 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-        <div class="movie-info">
+        <div class="movie-datetime-info">
             <p>
                 <span>Movie: </span>{{selectedMovie.movie_name}}
-                <br><span>Date and Time:</span> 21 Aug 2022 | 17.30
+                <br><span>Date and Time:</span> {{selectedMovie.movie_date}} | {{selectedMovie.movie_time}}
             </p>
 
+        </div>
+        <div class="movie-theatre-info">
+            <p>
+                <span>Theatre: </span>{{selectedMovie.movie_theatre}}
+                <br><span>Screen No: </span>{{selectedMovie.screen_no}}
+            </p>
         </div>
 
 

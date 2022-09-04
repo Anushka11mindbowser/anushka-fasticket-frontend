@@ -1,17 +1,11 @@
 @import "../../../../styles/variables.scss";
 .container-fluid {
     background-color: $main-theme;
-    height: 640px;
+    height: 90vh;
 }
 
 .text {
     margin: auto;
     display: grid;
     color: $home-page-text
-}
-
-@media only screen and (max-width:640px) {
-    .container-fluid {
-        height: 550px;
-    }
 }

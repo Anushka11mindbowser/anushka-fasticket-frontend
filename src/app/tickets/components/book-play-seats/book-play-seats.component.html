@@ -1,9 +1,15 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-        <div class="movie-info">
+        <div class="play-datetime-info">
             <p>
                 <span>Play: </span>{{selectedPlay.play_name}}
-                <br><span>Date and Time:</span> 21 Aug 2022 | 17.30
+                <br><span>Date and Time:</span> {{selectedPlay.play_date}} | {{selectedPlay.play_time}}
+            </p>
+        </div>
+        <div class="play-theatre-info">
+            <p>
+                <span>Theatre: </span>{{selectedPlay.play_theatre}}
+                <br><span>Stage No:</span> {{selectedPlay.stage_no}}
             </p>
         </div>
 

@@ -8,6 +8,10 @@
     font-size: larger
 }
 
+.responsive-movie-row {
+    display: none;
+}
+
 .movie-row {
     background-color: $movie-row;
 }
@@ -20,6 +24,10 @@
 
 .card-text {
     color: $show-card-text;
+}
+
+.responsive-play-row {
+    display: none;
 }
 
 .play-row {
@@ -45,32 +53,19 @@
 
 @media only screen and (max-width:640px) {
     .card {
-        width: 130px;
-        margin-top: 25px;
         margin: 5px;
-        background-color: $show-card-background;
-    }
-    img {
-        width: 130px;
-        height: 100px;
-    }
-    .card-body {
-        width: 170px;
-    }
-    .card-body p {
-        font-size: xx-small;
-        font-weight: 100;
-        margin: 0px;
-        text-align: left;
+        padding: 5px;
     }
     .movie-row {
-        width: 100%;
-        margin: 0px;
+        display: none;
     }
-    button {
-        margin-top: 15px;
-        height: 25px;
-        font-size: xx-small;
-        font-weight: 100;
+    .play-row {
+        display: none;
+    }
+    .responsive-movie-row {
+        display: flex;
+    }
+    .responsive-play-row {
+        display: flex;
     }
 }

@@ -43,12 +43,22 @@
     perspective: 1000px;
 }
 
-.movie-info span {
+.play-datetime-info span {
     font-weight: 700;
     color: $theatre_show_info;
 }
 
-.movie-info p {
+.play-datetime-info p {
+    font-weight: 500;
+    color: $theatre_show_title;
+}
+
+.play-theatre-info span {
+    font-weight: 700;
+    color: $theatre_show_info;
+}
+
+.play-theatre-info p {
     font-weight: 500;
     color: $theatre_show_title;
 }

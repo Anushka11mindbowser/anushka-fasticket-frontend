@@ -9,50 +9,89 @@
             <div class="container">
                 <form [formGroup]="myForm" (ngSubmit)="submitForm(myForm)">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-4">
                             <div class="mb-3">
 
-                                <input type="email" class="form-control name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your name:" formControlName="name">
-
+                                <input type="text" class="form-control name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your name:" formControlName="name">
+                                <span class="validator" *ngIf="name && name.invalid && name.touched">Enter a valid name</span>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="input-group mb-3">
+                        <div class="col-4">
+                            <div class="mb-3">
                                 <input type="text" class="form-control email" placeholder="username" aria-label="Username" formControlName="email">
+                                <span class="validator" *ngIf="email && email.invalid && email.touched">Enter a valid email</span>
 
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-4">
+                            <div class="mb-3">
+
+                                <input class="form-control phone-no" id="inputPhoneNumber" placeholder="your phone:" formControlName="phone">
+                                <span class="validator" *ngIf="phone && phone.invalid && phone.touched">Enter a valid phone</span>
                             </div>
 
                         </div>
                     </div>
                     <div class="row">
+
+
                         <div class="col-3">
                             <div class="mb-3">
 
-                                <input class="form-control phone-no" id="inputPhoneNumber" placeholder="your phone:" formControlName="phone">
-
+                                <input class="form-control movie-name" placeholder={{bookedPlay.play_name}} id="inputMovie" formControlName="show" value="Hello" readonly="readonly">
                             </div>
 
                         </div>
                         <div class="col-3">
                             <div class="mb-3">
-                                <input class="form-control play-name" id="inputShow" placeholder="{{bookedPlay.play_name}}" formControlName="show" readonly>
+                                <input class="form-control seats" id="inputSeats" placeholder="Seat Nos: {{booked_seats}}" formControlName="seat_nos" readonly>
+                            </div>
+
+
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+
+                                <input class="form-control tickets" id="inputTicketsNo" placeholder="Tickets: {{tickets_no}}" formControlName="ticket_no">
+
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="mb-3">
+
+                                <input class="form-control price" id="inputPrice" placeholder="Price: {{ticket_price}}" formControlName="ticket_price">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <input class="form-control date" id="inputDate" placeholder="Date = {{bookedPlay.play_date}}" formControlName="show_date" readonly>
                             </div>
 
                         </div>
                         <div class="col-3">
                             <div class="mb-3">
-                                <input class="form-control datetime" id="inputShow" placeholder="21 Aug 2022 | 17.30" formControlName="datetime" readonly>
-
+                                <input class="form-control time" id="inputDateTime" placeholder=" Time.{{bookedPlay.play_time}}" formControlName="show_time" readonly>
                             </div>
 
                         </div>
                         <div class="col-3">
                             <div class="mb-3">
-                                <input class="form-control seats" id="inputSeats" placeholder="{{booked_seats}}" formControlName="seat_nos" readonly>
+                                <input class="form-control theatre" id="inputTheatre" placeholder="{{bookedPlay.play_theatre}}" formControlName="show_theatre" readonly>
                             </div>
-
                         </div>
-
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <input class="form-control screen" id="inputScreen" placeholder="Stage No.{{bookedPlay.stage_no}}" formControlName="show_screen" readonly>
+                            </div>
+                        </div>
                     </div>
                     <button class="btn btn-info">Confirm Booking</button>
                 </form>
